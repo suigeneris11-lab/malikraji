@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Malik Raji (Sui GENERIS) provides gadget sales and admission processing services, including laptops, smartphones, printers and school application assistance in Lagos and Ijebu-Ode, Ogun State.">
+  <meta name="keywords" content="Malik Raji, Sui GENERIS, gadget sales, laptops Lagos, phones Lagos, printers Lagos, admission processing, school admission, admission assistance, Ijebu Ode admission processing">
+  <meta name="author" content="Malik Raji">
+  <title>Malik Raji | Sui GENERIS — Gadgets & Admission Services</title>
+  <style>
+    :root {
+      --ink: #10202b;
+      --muted: #64727b;
+      --accent: #0b7a75;
+      --accent-dark: #075c59;
+      --cream: #f6f8f6;
+      --white: #ffffff;
+      --line: #e1e8e5;
+      --shadow: 0 18px 45px rgba(16,32,43,.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand { font-weight: 900; letter-spacing: .04em; }
+    .brand small { display: block; color: var(--accent); font-size: .72rem; letter-spacing: .18em; }
+    nav { display: flex; gap: 26px; font-size: .94rem; font-weight: 700; }
+    nav a:hover { color: var(--accent); }
+    .hero {
+      padding: 100px 0 90px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(11,122,117,.16), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(11,122,117,.10), transparent 28%),
+        var(--white);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; align-items: center; }
+    .eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .13em; text-transform: uppercase; font-size: .78rem; }
+    h1 { font-size: clamp(2.8rem, 6vw, 5.4rem); line-height: .98; letter-spacing: -.055em; margin: 14px 0 22px; }
+    .hero p { max-width: 680px; color: var(--muted); font-size: 1.15rem; }
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 13px 21px; border-radius: 999px; font-weight: 800;
+      border: 1px solid var(--accent); transition: .2s ease;
+    }
+    .btn.primary { color: white; background: var(--accent); }
+    .btn.primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .btn.secondary { color: var(--accent); background: transparent; }
+    .btn.secondary:hover { background: #edf7f5; }
+    .hero-card {
+      background: var(--ink); color: white; padding: 34px; border-radius: 28px;
+      box-shadow: var(--shadow); position: relative; overflow: hidden;
+    }
+    .hero-card:after {
+      content: "S"; position: absolute; right: -15px; bottom: -60px;
+      font-size: 14rem; font-weight: 900; color: rgba(255,255,255,.05);
+    }
+    .hero-card h2 { font-size: 1.7rem; margin-bottom: 8px; }
+    .hero-card p { color: #cbd6d9; font-size: .98rem; }
+    section { padding: 88px 0; }
+    .section-head { margin-bottom: 38px; }
+    .section-head h2 { font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -.04em; margin-top: 8px; }
+    .section-head p { color: var(--muted); max-width: 680px; }
+    .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .service {
+      background: white; border: 1px solid var(--line); border-radius: 24px;
+      padding: 34px; box-shadow: 0 8px 28px rgba(16,32,43,.05);
+    }
+    .icon { font-size: 2rem; margin-bottom: 18px; }
+    .service h3 { font-size: 1.35rem; margin-bottom: 9px; }
+    .service p { color: var(--muted); }
+    .about { background: var(--white); }
+    .about-box { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: center; }
+    .monogram {
+      min-height: 310px; border-radius: 28px; background: var(--ink); color: white;
+      display: grid; place-items: center; font-size: 8rem; font-weight: 900;
+      letter-spacing: -.08em;
+    }
+    .about-text p { color: var(--muted); font-size: 1.08rem; margin-bottom: 18px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .contact-card {
+      background: white; border: 1px solid var(--line); border-radius: 24px; padding: 30px;
+    }
+    .contact-card h3 { margin-bottom: 16px; }
+    .contact-card p, .contact-card li { color: var(--muted); margin: 8px 0; }
+    .contact-card ul { list-style: none; }
+    footer { background: var(--ink); color: #dbe4e6; padding: 30px 0; }
+    footer .container { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer small { color: #9eafb4; }
+    @media (max-width: 800px) {
+      nav { display: none; }
+      .hero { padding-top: 70px; }
+      .hero-grid, .services, .about-box, .contact-grid { grid-template-columns: 1fr; }
+      .monogram { min-height: 220px; font-size: 6rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">MALIK RAJI<small>Sui GENERIS</small></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Gadgets • Admission Processing • Educational Services</div>
+          <h1>Technology &amp; Education, Made Easier.</h1>
+          <p>Welcome to the official online presence of Malik Raji (Sui GENERIS). We provide gadget sales and admission-processing services, serving customers and applicants in Lagos and Ijebu-Ode, Ogun State.</p>
+          <div class="buttons">
+            <a class="btn primary" href="https://wa.me/2349064567214" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <a class="btn secondary" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="eyebrow" style="color:#79d8d1">Sui GENERIS</div>
+          <h2>Practical services for modern needs.</h2>
+          <p>From everyday technology products to assistance with school applications, our services are designed to make the process simpler and clearer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Our Services</h2>
+          <p>Reliable assistance across technology products and educational application support.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="icon">💻</div>
+            <h3>Gadget Sales</h3>
+            <p>Laptops • Smartphones • Printers • Gadgets &amp; Accessories</p>
+          </article>
+          <article class="service">
+            <div class="icon">🎓</div>
+            <h3>Admission Processing</h3>
+            <p>School Applications • Admission Processing • Application Assistance • Admission Guidance</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-box">
+        <div class="monogram" aria-label="Sui GENERIS monogram">S</div>
+        <div class="about-text">
+          <div class="eyebrow">About Malik Raji</div>
+          <h2>Built around technology and educational services.</h2>
+          <p>Malik Raji, also known as Sui GENERIS, is a Nigerian entrepreneur and service provider involved in technology products and educational admission services.</p>
+          <p>Admission assistance is provided as an independent service. This website does not claim affiliation with, representation of, or authority from any university or other educational institution unless expressly stated.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Connect with us</div>
+          <h2>Let's talk.</h2>
+          <p>Reach out for gadget enquiries or admission/application assistance.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Contact</h3>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/2349064567214">09064567214</a></p>
+            <p><strong>TikTok:</strong> @saabey_ofourtime</p>
+            <p><strong>LinkedIn:</strong> Raji Adewale</p>
+          </div>
+          <div class="contact-card">
+            <h3>Service Locations</h3>
+            <ul>
+              <li>📍 Lagos</li>
+              <li>📍 Ijebu-Ode, Ogun State</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>MALIK RAJI · Sui GENERIS</strong>
+      <small>Gadgets • Admission Processing • Educational Services</small>
+    </div>
+  </footer>
+</body>
+</html>
